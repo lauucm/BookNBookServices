@@ -74,7 +74,7 @@
             <img src="https://i.pinimg.com/600x315/ba/15/d6/ba15d683cb3748bd057a3966fb777c99.jpg" class="d-block w-100 h-50 c-img" alt="Slide 2"/>
             <div class="carousel-caption d-none d-md-block">
                 <p class="mt-5 fs-3 text-uppercase text-dark fw-bold">Observa tus lecturas pendientes, completas y en proceso</p>
-                <button class="btn btn-primary px-4 py-2 fs-5 mt-5sss" style="color: black; background-color: #ff9966; border: 0px solid">Mis lecturas</button>
+                <a href="/BookNBookServices/menuLecturas.jsp"><button class="btn btn-primary px-4 py-2 fs-5 mt-5sss" style="color: black; background-color: #ff9966; border: 0px solid">Mis lecturas</button>
             </div>
           </div>
           <div class="carousel-item c-item">
@@ -114,7 +114,7 @@
         </div>
       </div>
       <div class="card">
-        <img src="https://th.bing.com/th/id/OIP.jzmqPLfT1iRpQuiU1leqWgHaLk?pid=ImgDet&rs=1" class="card-img-top w-100 h-75" alt="">
+        <img src="https://th.bing.com/th/id/R.e1c4962486daf141facdaa43dba2cca9?rik=U64DMgwPsGRSuw&pid=ImgRaw&r=0" class="card-img-top w-100 h-75" alt="">
         <div class="card-body" style="background-color: #c0ecef;">
             <p class="card-title fs-4 fw-bold">Libro 3</p>
             <p class="card-text fst-italic">Descripcion ...</p>
@@ -122,7 +122,7 @@
         </div>
       </div>
       <div class="card">
-        <img src="https://th.bing.com/th/id/OIP.jzmqPLfT1iRpQuiU1leqWgHaLk?pid=ImgDet&rs=1" class="card-img-top w-100 h-75" alt="">
+        <img src="https://imagessl8.casadellibro.com/a/l/t0/68/9789807909068.jpg" class="card-img-top w-100 h-75" alt="">
         <div class="card-body" style="background-color: #c0ecef;">
             <p class="card-title fs-4 fw-bold">Libro 4</p>
             <p class="card-text fst-italic">Descripcion ...</p>
