@@ -19,7 +19,7 @@
             <div>
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active fw-bold" aria-current="page" href="#">Principal</a>
+                  <a class="nav-link active fw-bold" aria-current="page" href="/BookNBookServices/paginaPrincipal.jsp">Principal</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link fw-bold" href="#">Descubrir</a>
@@ -74,7 +74,7 @@
             <img src="https://i.pinimg.com/600x315/ba/15/d6/ba15d683cb3748bd057a3966fb777c99.jpg" class="d-block w-100 h-50 c-img" alt="Slide 2"/>
             <div class="carousel-caption d-none d-md-block">
                 <p class="mt-5 fs-3 text-uppercase text-dark fw-bold">Observa tus lecturas pendientes, completas y en proceso</p>
-                <a href="/BookNBookServices/menuLecturas.jsp"><button class="btn btn-primary px-4 py-2 fs-5 mt-5sss" style="color: black; background-color: #ff9966; border: 0px solid">Mis lecturas</button>
+                <a href="/BookNBookServices/menuLecturas.jsp"><button class="btn btn-primary px-4 py-2 fs-5 mt-5sss" style="color: black; background-color: #ff9966; border: 0px solid">Mis lecturas</button></a>
             </div>
           </div>
           <div class="carousel-item c-item">
