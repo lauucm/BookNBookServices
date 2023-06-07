@@ -19,7 +19,8 @@
 
             <div class="d-flex justify-content-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
 
-              <form style="width: 23rem;">
+<!-- SERVLET -->
+              <form action="/BookNBookApi/servlet-login" method="POST" style="width: 23rem;">
 
                 <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">ACCESO</h3>
 
@@ -33,14 +34,12 @@
                   <label class="form-label" for="form2Example28">Password</label>
                 </div>
 
-<!-- BOTON AL SERVLET Y DE AHÍ AL JSP DE PAGINA PRINCIPAL -->
                 <div class="pt-1 mb-4">
                   <button class="btn btn-info btn-lg btn-block" type="button" style="background-color: #2fc0ca;">
                   <i class="fa-solid fa-right-to-bracket"></i> Acceder</button>
                 </div>
 
-                <p class="small mb-5 pb-lg-2"><a class="text-muted" href="/BookNBookServices/resetPassword.jsp">Forgot password?</a></p>
-                <p>Si no tienes una cuenta: <a href="/BookNBookServices/registro.jsp" class="link-info">Registrare aqui!</a></p>
+                <p>Si no tienes una cuenta: <a href="/BookNBookServices/jsp/registro.jsp" class="link-info">Registrare aqui!</a></p>
 
               </form>
 

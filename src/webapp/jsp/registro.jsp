@@ -1,4 +1,3 @@
-
 <html>
 <head>
     <title>Book N Book: Registro</title>
@@ -19,6 +18,7 @@
 
             <div class="d-flex justify-content-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
 
+<!-- SERVLET -->
               <form class="row g-3">
               <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">REGISTRO</h3>
                 <div class="col-md-4">

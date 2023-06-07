@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Book N Book: Leidos</title>
+    <title>Book N Book: Descubrir</title>
 	<meta charset="UTF-8">
     <link href="/BookNBookServices/webapp/css/bookNBookCss.css" rel="stylesheet" type="text/css">
     <script src="https://use.fontawesome.com/releases/v5.12.0/js/all.js" data-auto-replace-svg="nest"></script>
@@ -15,37 +15,36 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div>
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link fw-bold" href="/BookNBookServices/paginaPrincipal.jsp">Principal</a>
+                  <a class="nav-link fw-bold" aria-current="page" href="/BookNBookServices/jsp/paginas/paginaPrincipal.jsp">Principal</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link fw-bold" href="#">Descubrir</a>
+                  <a class="nav-link fw-bold" href="/BookNBookServices/jsp/menus/descubrirLecturas.jsp">Descubrir</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-bold" href="#">X</a>
+                    <a class="nav-link fw-bold" href="/BookNBookServices/jsp/menus/menuLecturas.jsp">Mis Lecturas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-bold" href="#">Y</a>
+                    <a class="nav-link fw-bold" href="/BookNBookServices/jsp/menus/estadisticasUsuario.jsp">Estadisticas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled fw-bold" href="#" tabindex="-1" aria-disabled="true">Proximamente...</a>
                 </li>
             </div>
             <div>
-                <ul class="navbar-nav me-auto btn-group dropstart">
+                <ul class="navbar-nav me-auto btn-group dropend">
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-user" style="color: #2fc0ca;"></i>
                       </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Mi usuario</a></li>
-                        <li><a class="dropdown-item" href="#">Mis lecturas</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Estadisticas</a></li>
-                      </ul>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/BookNBookServices/jsp/paginas/paginaUsuario.jsp">Mi usuario</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/BookNBookServices/jsp/paginas/paginaSugerencias.jsp">Sugerencias</a></li>
+                        </ul>
                     </li>
                 </ul>
               </ul>
