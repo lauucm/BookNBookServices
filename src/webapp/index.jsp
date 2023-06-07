@@ -39,7 +39,7 @@
                   <i class="fa-solid fa-right-to-bracket"></i> Acceder</button>
                 </div>
 
-                <p>Si no tienes una cuenta: <a href="/BookNBookApi/registro.jsp" class="link-info">Registrare aqui!</a></p>
+                <p>Si no tienes una cuenta: <a href="/BookNBookServices/jsp/registro.jsp" class="link-info">Registrare aqui!</a></p>
 
               </form>
 

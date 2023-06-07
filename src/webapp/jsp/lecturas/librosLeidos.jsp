@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Book N Book: Descubrir</title>
+    <title>Book N Book: Leidos</title>
 	<meta charset="UTF-8">
     <link href="/BookNBookServices/webapp/css/bookNBookCss.css" rel="stylesheet" type="text/css">
     <script src="https://use.fontawesome.com/releases/v5.12.0/js/all.js" data-auto-replace-svg="nest"></script>
@@ -19,16 +19,16 @@
             <div>
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link fw-bold" aria-current="page" href="/BookNBookServices/paginaPrincipal.jsp">Principal</a>
+                  <a class="nav-link fw-bold" aria-current="page" href="/BookNBookServices/jsp/paginas/paginaPrincipal.jsp">Principal</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link fw-bold" href="/BookNBookServices/descubrirLecturas.jsp">Descubrir</a>
+                  <a class="nav-link fw-bold" href="/BookNBookServices/jsp/menus/descubrirLecturas.jsp">Descubrir</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-bold" href="/BookNBookServices/menuLecturas.jsp">Mis Lecturas</a>
+                    <a class="nav-link active fw-bold" href="/BookNBookServices/jsp/menus/menuLecturas.jsp">Mis Lecturas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-bold" href="/BookNBookServices/estadisticasUsuario.jsp">Estadisticas</a>
+                    <a class="nav-link fw-bold" href="/BookNBookServices/jsp/menus/estadisticasUsuario.jsp">Estadisticas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled fw-bold" href="#" tabindex="-1" aria-disabled="true">Proximamente...</a>
@@ -41,9 +41,9 @@
                         <i class="fa-solid fa-user" style="color: #2fc0ca;"></i>
                       </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/BookNBookApi/paginaUsuario.jsp">Mi usuario</a></li>
+                            <li><a class="dropdown-item" href="/BookNBookServices/jsp/paginas/paginaUsuario.jsp">Mi usuario</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="/BookNBookApi/paginaSugerencias.jsp">Sugerencias</a></li>
+                            <li><a class="dropdown-item" href="/BookNBookServices/jsp/paginas/paginaSugerencias.jsp">Sugerencias</a></li>
                         </ul>
                     </li>
                 </ul>
