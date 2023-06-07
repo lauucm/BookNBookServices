@@ -15,36 +15,35 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div>
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active fw-bold" aria-current="page" href="/BookNBookServices/paginaPrincipal.jsp">Principal</a>
+                  <a class="nav-link active fw-bold" aria-current="page" href="/BookNBookApi/paginaPrincipal.jsp">Principal</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link fw-bold" href="#">Descubrir</a>
+                  <a class="nav-link fw-bold" href="/BookNBookApi/descubrirLecturas.jsp">Descubrir</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-bold" href="#">X</a>
+                    <a class="nav-link fw-bold" href="/BookNBookApi/menuLecturas.jsp">Mis Lecturas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-bold" href="#">Y</a>
+                    <a class="nav-link fw-bold" href="/BookNBookApi/estadisticasUsuario.jsp">Estadisticas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled fw-bold" href="#" tabindex="-1" aria-disabled="true">Proximamente...</a>
                 </li>
             </div>
             <div>
-                <ul class="navbar-nav me-auto btn-group dropstart">
+                <ul class="navbar-nav me-auto btn-group dropend">
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-user" style="color: #2fc0ca;"></i>
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Mi usuario</a></li>
-                        <li><a class="dropdown-item" href="#">Mis lecturas</a></li>
+                        <li><a class="dropdown-item" href="/BookNBookApi/paginaUsuario.jsp">Mi usuario</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Estadisticas</a></li>
+                        <li><a class="dropdown-item" href="/BookNBookApi/paginaSugerencias.jsp">Sugerencias</a></li>
                       </ul>
                     </li>
                 </ul>
@@ -67,21 +66,21 @@
             <img src="https://i.pinimg.com/736x/d4/c2/82/d4c282c3abef8c8c977f42807ea3445b.jpg" class="d-block w-100 h-50 c-img" alt="Slide 1"/>
             <div class="carousel-caption d-none d-md-block">
                 <p class="mt-5 fs-3 text-uppercase text-dark fw-bold">Descubre nuevas lecturas</p>
-                <button class="btn btn-primary px-4 py-2 fs-5 mt-5sss" style="color: black; background-color: #993399; border: 0px solid">Descubrir</button>
+                <a href="/BookNBookApi/descubrirLecturas.jsp"><button class="btn btn-primary px-4 py-2 fs-5 mt-5sss" style="color: black; background-color: #993399; border: 0px solid">Descubrir</button></a>
             </div>
           </div>
           <div class="carousel-item c-item">
             <img src="https://i.pinimg.com/600x315/ba/15/d6/ba15d683cb3748bd057a3966fb777c99.jpg" class="d-block w-100 h-50 c-img" alt="Slide 2"/>
             <div class="carousel-caption d-none d-md-block">
                 <p class="mt-5 fs-3 text-uppercase text-dark fw-bold">Observa tus lecturas pendientes, completas y en proceso</p>
-                <a href="/BookNBookServices/menuLecturas.jsp"><button class="btn btn-primary px-4 py-2 fs-5 mt-5sss" style="color: black; background-color: #ff9966; border: 0px solid">Mis lecturas</button></a>
+                <a href="/BookNBookApi/menuLecturas.jsp"><button class="btn btn-primary px-4 py-2 fs-5 mt-5sss" style="color: black; background-color: #ff9966; border: 0px solid">Mis lecturas</button></a>
             </div>
           </div>
           <div class="carousel-item c-item">
             <img src="https://i.pinimg.com/originals/42/78/63/42786397e071d79469952f0cf3fe0668.jpg" class="d-block w-100 h-50 c-img" alt="Slide 3"/>
             <div class="carousel-caption d-none d-md-block">
                 <p class="mt-5 fs-3 text-uppercase text-dark fw-bold">Informate sobre tus progresos</p>
-                <button class="btn btn-primary px-4 py-2 fs-5 mt-5sss" style="color: black; background-color: #ff6699; border: 0px solid">Estadisticas</button>
+                <a href="/BookNBookApi/estadisticasUsuario.jsp"><button class="btn btn-primary px-4 py-2 fs-5 mt-5sss" style="color: black; background-color: #ff6699; border: 0px solid">Estadisticas</button></a>
             </div>
           </div>
         </div>

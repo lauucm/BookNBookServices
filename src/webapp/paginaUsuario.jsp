@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Book N Book: Mis Lecturas</title>
+    <title>Book N Book: Descubrir</title>
 	<meta charset="UTF-8">
     <link href="/BookNBookServices/webapp/css/bookNBookCss.css" rel="stylesheet" type="text/css">
     <script src="https://use.fontawesome.com/releases/v5.12.0/js/all.js" data-auto-replace-svg="nest"></script>
@@ -19,16 +19,16 @@
             <div>
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link fw-bold" aria-current="page" href="/BookNBookApi/paginaPrincipal.jsp">Principal</a>
+                  <a class="nav-link fw-bold" aria-current="page" href="/BookNBookServices/paginaPrincipal.jsp">Principal</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link fw-bold" href="/BookNBookApi/descubrirLecturas.jsp">Descubrir</a>
+                  <a class="nav-link fw-bold" href="/BookNBookServices/descubrirLecturas.jsp">Descubrir</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active fw-bold" href="/BookNBookApi/menuLecturas.jsp">Mis Lecturas</a>
+                    <a class="nav-link fw-bold" href="/BookNBookServices/menuLecturas.jsp">Mis Lecturas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-bold" href="/BookNBookApi/estadisticasUsuario.jsp">Estadisticas</a>
+                    <a class="nav-link fw-bold" href="/BookNBookServices/estadisticasUsuario.jsp">Estadisticas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled fw-bold" href="#" tabindex="-1" aria-disabled="true">Proximamente...</a>
@@ -53,41 +53,6 @@
       </div>
     </nav>
 
-    <!-- Cuadraditos -->
-    <div class="container">
-    <div class="m-5 ">
-      <!--Grid row-->
-      <div class="row">
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-4">
-            <a style="text-decoration:none; color: black;" href="/BookNBookApi/librosLeidos.jsp">
-                <img src="./imagenes/imagenLibroLeido.jpg"
-                    class="img-fluid rounded-4 shadow-2-strong"
-                    alt="Libros leidos del usuario"/>
-                <p class="text-center fs-5 fw-bold">Libros leidos</p>
-            </a>
-        </div>
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-6 mb-4">
-            <a style="text-decoration:none; color: black;" href="/BookNBookApi/librosEnCurso.jsp">
-                <img src="./imagenes/imagenLibroProceso.jpg"
-                class="img-fluid rounded-4 shadow-2-strong"
-                alt="Libros en curso del usuario "/>
-                <p class="text-center fs-5 fw-bold">Libros en curso</p>
-            </a>
-        </div>
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-6 mb-4">
-            <a style="text-decoration:none; color: black;" href="/BookNBookApi/librosEnLista.jsp">
-              <img src="./imagenes/imagenLibroNoLeido.jpg"
-                class="img-fluid rounded-4 shadow-2-strong"
-                alt="Libros no leidos del usuario"/>
-              <p class="text-center fs-5 fw-bold">Libros en la lista</p>
-            </a>
-        </div>
-      </div>
-    </div>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
