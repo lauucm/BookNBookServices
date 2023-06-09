@@ -35,14 +35,15 @@
                 </div>
 
                 <div class="pt-1 mb-4">
-                  <button class="btn btn-info btn-lg btn-block" type="button" style="background-color: #2fc0ca;">
-                  <i class="fa-solid fa-right-to-bracket"></i> Acceder</button>
+                  <input type="submit" value="Acceder" class="btn btn-info btn-lg btn-block" style="background-color: #2fc0ca;"/>
                 </div>
 
                 <p>Si no tienes una cuenta: <a href="/BookNBookServices/jsp/registro.jsp" class="link-info">Registrare aqui!</a></p>
 
               </form>
-
+              <%if(request.getAttribute("error")!=null){%>
+                    <p class="fadeIn fifth"><%=request.getAttribute("error")%></p>
+              <%}%>
             </div>
 
           </div>

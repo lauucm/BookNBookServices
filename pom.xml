@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.BookNBookServices</groupId>
-    <artifactId>BookNBookApi</artifactId>
+    <artifactId>BookNBookServices</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -62,11 +62,6 @@
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-jaxb</artifactId>
             <version>3.0.4</version>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.xml.bind</groupId>
-            <artifactId>jakarta.xml.bind-api</artifactId>
-            <version>3.0.1</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
