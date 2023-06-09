@@ -88,14 +88,41 @@
 
         var data = google.visualization.arrayToDataTable([
           ['Libros', 'Estado'],
-          ['Leido',     11],
-          ['En proceso',      2],
-          ['Sin leer',  2]
+          ['Lecturas finalizadas',     11],
+          ['Lecturas en proceso',      2],
+          ['Lecturas a la espera',  2]
         ]);
 
         var options = {
-          title: 'Porcentaje de lectura',
+          title: 'Porcentaje de lecturas',
           is3D: true,
+          slices: {
+             0: { color: 'B6F4B8' },
+             1: { color: 'FCF997' },
+             2: { color: 'FCA297' }
+          },
+          pieSliceTextStyle: {
+             color: 'black',
+          },
+          titleTextStyle: {
+              color: '#2FC0CA',
+              fontName: 'Times-Roman',
+              fontSize: 32,
+              bold: true,
+              italic: true
+          },
+          legendTextStyle: {
+              color: '#1799A2',
+              fontName: 'Times-Roman',
+              fontSize: 12,
+              bold: true
+          },
+          pieSliceTextStyle: {
+              color: '#0D5E63',
+              fontName: 'Times-Roman',
+              fontSize: 16,
+              bold: true
+          }
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
@@ -153,11 +180,12 @@
 
     <!-- CALENDARIO -->
     <div class="container">
-        <div id="calendar_basic" class="row justify-content-center m-5" style="width: 1000px; height: 350px;"></div>
+        <div class="row justify-content-center">
+            <div id="calendar_basic" class="mt-5" style="width: 1000px; height: 200px;"></div>
+            <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+        </div>
     </div>
-    <div class="container">
-        <div id="piechart_3d" class="row justify-content-center" style="width: 900px; height: 500px;"></div>
-    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -25,30 +25,31 @@ public class ServletLogin extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws
             ServletException,
             IOException {
+        try {
+            // Recuperamos parametros de la entrada
+            String email = req.getParameter("user");
+            String password = req.getParameter("password");
+            LoginDAO user = new LoginDAO(email, password);
 
-        // Recuperamos parametros de la entrada
-        String usuario = req.getParameter("user");
-        String password = req.getParameter("password");
-        LoginDAO user = new LoginDAO(usuario, password);
-        //Se valida si los parametros coinciden con las credenciales
-        Usuario usuarioLogged = login.login(user);
-        if(usuarioLogged!= null && usuarioLogged.getId()!=null){
-            UsuarioLogged usuSesion = new UsuarioLogged(usuarioLogged.getId(), usuarioLogged.getEmail(),
-                    usuarioLogged.getTipoUsuario().toString());
-            req.getSession().setAttribute("userLogin", usuSesion);
-            //Se indica el tiempo de expiración de la sesion
-            req.getSession().setMaxInactiveInterval(10);
-            //Redirigimos a pagina homePage.jsp utilizando el metodo "sendRedirect" del objeto de respuesta
-            resp.sendRedirect("/BookNBookApi/webapp/paginaPrincipal.jsp");
-        } else {
-            //Se indica mensaje de error en los atributos de la solicitud
-            req.setAttribute("error","Error al validar usuario y contraseña");
+            //Se valida si los parametros coinciden con las credenciales
+            Usuario usuarioLogged = login.login(user);
+            if (usuarioLogged != null && usuarioLogged.getId() != null) {
+                UsuarioLogged usuSesion = new UsuarioLogged(usuarioLogged.getId(), usuarioLogged.getEmail(),
+                        usuarioLogged.getTipoUsuario().toString());
+                req.getSession().setAttribute("userLogin", usuSesion);
 
-            //Indicamos al dispatcher que haga un forward de la solicitud. Tener en cuenta que esta solicitud es la
-            //recibida en este servlet mas los parametros indicados en los atributos.
-            req.getRequestDispatcher("/BookNBookApi/webapp/index.jsp").forward(req,resp);
+                req.getSession().setMaxInactiveInterval(10);
+
+                resp.sendRedirect("/BookNBookServices/jsp/paginas/paginaPrincipal.jsp");
+            } else {
+                req.setAttribute("ERROR.", "Error al validar usuario y contraseña");
+                req.getRequestDispatcher("/BookNBookServices/index.jsp").forward(req, resp);
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            req.setAttribute("ERROR.", "Usuario no encontrado.");
+            req.getRequestDispatcher("/BookNBookServices/index.jsp").forward(req, resp);
+
         }
-
     }
-
 }
