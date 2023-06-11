@@ -1,12 +1,17 @@
 package org.BookNBookServices.dao;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 @Data
-public class Usuario {
+@NoArgsConstructor
+@AllArgsConstructor
+public class Usuario extends ErrorMessage implements Serializable {
     private Integer id;
     private String nombre;
     private String apellido1;
@@ -31,9 +36,9 @@ public class Usuario {
             this.nombre = result.getString("nombre");
             this.apellido1 = result.getString("apellido1");
             this.apellido2 = result.getString("apellido2");
-            this.email = result.getString("email");
+            this.email = result.getString("correo");
             this.password = result.getString("password");
-            this.tipoUsuario = TipoUsuario.NORMAL;
+            this.tipoUsuario = TipoUsuario.valueOf(result.getString("tipo_usuario"));
         }catch(SQLException e) {
             e.getStackTrace();
             throw e;

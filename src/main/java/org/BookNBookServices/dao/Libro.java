@@ -1,14 +1,19 @@
 package org.BookNBookServices.dao;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
 
 @Data
-public class Libro extends Saga{
+@NoArgsConstructor
+@AllArgsConstructor
+public class Libro extends Saga implements Serializable{
 
     private Integer id;
     private String nombre;
