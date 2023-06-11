@@ -1,13 +1,20 @@
 package org.BookNBookServices.dao;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
 @Data
-public class Autor {
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Autor implements Serializable {
 
     private Integer id;
     private String pseudonimo;

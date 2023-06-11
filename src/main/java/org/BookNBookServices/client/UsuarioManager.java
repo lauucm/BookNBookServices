@@ -1,9 +1,12 @@
 package org.BookNBookServices.client;
 
+import jakarta.ws.rs.client.Client;
+import jakarta.ws.rs.client.ClientBuilder;
 import jakarta.ws.rs.client.Entity;
 import jakarta.ws.rs.client.WebTarget;
 import jakarta.ws.rs.core.GenericType;
 import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 import lombok.AllArgsConstructor;
 import org.BookNBookServices.dao.LoginDAO;
 import org.BookNBookServices.dao.Usuario;
@@ -16,9 +19,15 @@ public class UsuarioManager {
     private final WebTarget webTarget;
     private final String pathUser = "/usuario";
 
+    public UsuarioManager() {
+        Client client = ClientBuilder.newClient();
+        this.webTarget = client.target("http://localhost:8082/BookNBook/api");
+    }
+
     public Usuario login(LoginDAO usuario){
-        return webTarget.path(pathUser + "/login").request(MediaType.APPLICATION_JSON)
-                .post(Entity.entity(usuario, MediaType.APPLICATION_JSON), Usuario.class);
+        Response response = webTarget.path(pathUser + "/login").request(MediaType.APPLICATION_JSON)
+                .post(Entity.entity(usuario, MediaType.APPLICATION_JSON));
+        return response.readEntity(Usuario.class);
     }
 
     public boolean register(Usuario usuario){

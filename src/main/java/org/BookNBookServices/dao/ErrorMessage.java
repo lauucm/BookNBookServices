@@ -1,18 +1,16 @@
 package org.BookNBookServices.dao;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.io.Serializable;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class LoginDAO implements Serializable {
+public class ErrorMessage implements Serializable {
 
-    String usuario;
-    String password;
+    private String message;
+
 }
