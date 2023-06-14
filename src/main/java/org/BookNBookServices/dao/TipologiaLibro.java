@@ -1,5 +1,7 @@
 package org.BookNBookServices.dao;
 
-public enum TipologiaLibro {
+import java.io.Serializable;
+
+public enum TipologiaLibro implements Serializable {
     FICCION, NOFICCION, INFANTILYJUVENIL, POESIA, COMIC
 }
