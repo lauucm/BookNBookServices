@@ -13,7 +13,7 @@
     <%@ include file="../encabezado/encabezado.jsp" %>
 
     <!-- USUARIO -->
-    <%Usuario usuario = (Usuario) request.getAttribute("usuarioMostrar");%>
+    <%Usuario usuario = (Usuario) request.getSession().getAttribute("usuarioMostrar");%>
     <section class="vh-100" style="background-color: #C0ECEF;">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -30,7 +30,7 @@
                 </div>
                 <div class="col-md-8">
                   <div class="card-body p-4">
-                    <h6 style="color: #2fc0ca;">INFORMACION</h6>
+                    <h6 style="color: #2fc0ca;">DATOS PERSONALES</h6>
                     <hr class="mt-0 mb-4">
                     <div class="row pt-1">
                       <div class="col-6 mb-3">
@@ -42,21 +42,17 @@
                         <p class="text-muted">********</p>
                       </div>
                     </div>
-                    <h6>Projects</h6>
+                    <h6 style="color: #2fc0ca;">INFORMACION</h6>
                     <hr class="mt-0 mb-4">
                     <div class="row pt-1">
                       <div class="col-6 mb-3">
-                        <h6>Recent</h6>
+                        <h6>Libros leidos</h6>
                         <p class="text-muted">Lorem ipsum</p>
                       </div>
                       <div class="col-6 mb-3">
-                        <h6>Most Viewed</h6>
+                        <h6>Paginas leidas</h6>
                         <p class="text-muted">Dolor sit amet</p>
                       </div>
-                    </div>
-                    <div class="d-flex justify-content-start">
-                      PAGINAS TOTALES
-                      LECTURAS TOTALES
                     </div>
                   </div>
                 </div>

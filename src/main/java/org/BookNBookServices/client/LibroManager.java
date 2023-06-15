@@ -2,12 +2,16 @@ package org.BookNBookServices.client;
 
 import jakarta.ws.rs.client.Client;
 import jakarta.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.Entity;
 import jakarta.ws.rs.client.WebTarget;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import lombok.AllArgsConstructor;
 import org.BookNBookServices.dao.Libro;
+import org.BookNBookServices.dao.control.AddLibroDAO;
+import org.BookNBookServices.dao.control.BuscarDAO;
 import org.BookNBookServices.dao.control.ListadoDAO;
+import org.BookNBookServices.dao.control.NoDataResponse;
 
 @AllArgsConstructor
 public class LibroManager {
@@ -59,6 +63,19 @@ public class LibroManager {
         Response response = webTarget.path(pathLibro + "/" + idUsuario + "/noleidos").request(MediaType.APPLICATION_JSON)
                 .get();
         ListadoDAO body = response.readEntity(ListadoDAO.class);
+        return body;
+    }
+
+    public NoDataResponse addLibro(AddLibroDAO libro){
+        Response response = webTarget.path(pathLibro + "/add").request(MediaType.APPLICATION_JSON)
+                .post(Entity.entity(libro, MediaType.APPLICATION_JSON));
+        return response.readEntity(NoDataResponse.class);
+    }
+
+    public Libro buscarLibro(BuscarDAO nombre){
+        Response response = webTarget.path(pathLibro + "/buscar").request(MediaType.APPLICATION_JSON)
+                .get();
+        Libro body = response.readEntity(Libro.class);
         return body;
     }
 

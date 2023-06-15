@@ -18,7 +18,7 @@
       <div class="row">
         <!--Grid column-->
         <div class="col-lg-4 col-md-12 mb-4">
-            <a style="text-decoration:none; color: black;" href="/BookNBookServices/jsp/comun/lecturas/listadoAutor.jsp">
+            <a style="text-decoration:none; color: black;" href="/BookNBookServices/listadoAutorServlet">
                 <img src="/BookNBookServices/imagenes/imagenLibroLeido.jpg"
                     class="img-fluid rounded-4 shadow-2-strong"
                     alt="Autores"/>
@@ -36,7 +36,7 @@
         </div>
         <!--Grid column-->
         <div class="col-lg-4 col-md-6 mb-4">
-            <a style="text-decoration:none; color: black;" href="/BookNBookServices/jsp/comun/lecturas/listadoSaga.jsp">
+            <a style="text-decoration:none; color: black;" href="/BookNBookServices/listadoSagasServlet">
               <img src="/BookNBookServices/imagenes/imagenLibroNoLeido.jpg"
                 class="img-fluid rounded-4 shadow-2-strong"
                 alt="Sagas"/>

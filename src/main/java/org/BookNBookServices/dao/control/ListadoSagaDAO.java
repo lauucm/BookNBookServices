@@ -2,7 +2,7 @@ package org.BookNBookServices.dao.control;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;
-import org.BookNBookServices.dao.Usuario;
+import org.BookNBookServices.dao.Saga;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -13,8 +13,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder
-public class ListadoUsuarioDAO extends ErrorMessage implements Serializable {
+public class ListadoSagaDAO extends ErrorMessage implements Serializable {
 
-    private ArrayList<Usuario> listado;
+    private ArrayList<Saga> listado;
 
 }

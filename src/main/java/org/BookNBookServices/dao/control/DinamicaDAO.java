@@ -5,19 +5,20 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
-import org.BookNBookServices.dao.Libro;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @SuperBuilder
-public class ListadoDAO extends ErrorMessage implements Serializable {
+public class DinamicaDAO extends ErrorMessage implements Serializable {
 
-    private ArrayList<Libro> listado;
+    private Integer idLibro;
+
+    private Integer idUsuario;
+
+    private Integer PagActual;
 
 }
