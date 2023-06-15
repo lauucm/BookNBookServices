@@ -29,8 +29,8 @@ public class ServletUsuario extends HttpServlet{
             Usuario usuarioMostrar = service.getUsuario(usuarioLogged.getId());
 
             if(usuarioMostrar != null){
-                request.setAttribute("usuarioMostrar", usuarioLogged);
-                request.getRequestDispatcher("../jsp/comun/paginas/paginaUsuario.jsp").forward(request, response);
+                request.getSession().setAttribute("usuarioMostrar", usuarioMostrar);
+                response.sendRedirect("/BookNBookServices/jsp/comun/paginas/paginaUsuario.jsp");
             } else {
                 System.out.println("ELSE");
                 response.sendRedirect("/BookNBookServices/jsp/comun/paginas/paginaPrincipal.jsp");

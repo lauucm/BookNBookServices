@@ -9,6 +9,8 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import lombok.AllArgsConstructor;
 import org.BookNBookServices.dao.Usuario;
+import org.BookNBookServices.dao.control.ListadoDAO;
+import org.BookNBookServices.dao.control.ListadoUsuarioDAO;
 import org.BookNBookServices.dao.control.LoginDAO;
 import org.BookNBookServices.dao.control.NoDataResponse;
 
@@ -38,12 +40,6 @@ public class UsuarioManager {
         return response.readEntity(NoDataResponse.class);
     }
 
-    public boolean delete(String usuario){
-        Response response = webTarget.path(pathUser + "/delete/{usuario}").request(MediaType.APPLICATION_JSON)
-                .post(Entity.entity(usuario, MediaType.APPLICATION_JSON));
-        return response.readEntity(boolean.class);
-    }
-
     public NoDataResponse existEmail(String email){
          Response response = webTarget.queryParam("email", email).path(pathUser + "/register/email").request(MediaType.APPLICATION_JSON)
                  .get();
@@ -57,5 +53,6 @@ public class UsuarioManager {
         Usuario body = response.readEntity(Usuario.class);
         return body;
     }
+
 
 }
