@@ -47,11 +47,11 @@
                     <div class="row pt-1">
                       <div class="col-6 mb-3">
                         <h6>Libros leidos</h6>
-                        <p class="text-muted">Lorem ipsum</p>
+                        <p class="text-muted"><%= request.getSession().getAttribute("librosLeidos")%></p>
                       </div>
                       <div class="col-6 mb-3">
                         <h6>Paginas leidas</h6>
-                        <p class="text-muted">Dolor sit amet</p>
+                        <p class="text-muted"><%= request.getSession().getAttribute("paginasLeidas")%></p>
                       </div>
                     </div>
                   </div>

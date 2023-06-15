@@ -27,4 +27,6 @@ public interface LibroService {
     Libro buscarLibro(BuscarDAO nombre);
 
     NoDataResponse addLibro(AddLibroDAO libro);
+
+    Integer contarLibrosLeidos(Integer idUsuario);
 }
