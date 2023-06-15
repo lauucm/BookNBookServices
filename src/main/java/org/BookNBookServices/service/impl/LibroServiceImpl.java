@@ -48,6 +48,12 @@ public class LibroServiceImpl implements LibroService {
         return libroManager.listarLibrosLeidos(idUsuario);
     }
 
+    public Integer contarLibrosLeidos(Integer idUsuario) {
+        ListadoDAO listado = libroManager.listarLibrosLeidos(idUsuario);
+        Integer numeroLibros = listado.getListado().size();
+        return numeroLibros;
+    }
+
     @Override
     public ListadoDAO listarLibrosNoLeidos(Integer idUsuario) {
         return libroManager.listarLibrosNoLeidos(idUsuario);
