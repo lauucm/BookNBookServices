@@ -19,7 +19,7 @@
         <!--Grid column-->
         <div class="col-lg-4 col-md-12 mb-4">
             <a style="text-decoration:none; color: black;" href="/BookNBookServices/listadoAutorServlet">
-                <img src="/BookNBookServices/imagenes/imagenLibroLeido.jpg"
+                <img src="https://th.bing.com/th/id/OIP.cZw6VByXbyYcryyoMbjzswHaHa?pid=ImgDet&w=488&h=488&rs=1"
                     class="img-fluid rounded-4 shadow-2-strong"
                     alt="Autores"/>
                 <p class="text-center fs-5 fw-bold">Autores</p>
@@ -28,7 +28,7 @@
         <!--Grid column-->
         <div class="col-lg-4 col-md-6 mb-4">
             <a style="text-decoration:none; color: black;" href="/BookNBookServices/jsp/comun/lecturas/libroTematica.jsp">
-                <img src="/BookNBookServices/imagenes/imagenLibroProceso.jpg"
+                <img src="https://th.bing.com/th/id/OIP.gAD1k6LYONSZdu9xl5BZcAHaHW?pid=ImgDet&w=768&h=762&rs=1"
                 class="img-fluid rounded-4 shadow-2-strong"
                 alt="Tematica"/>
                 <p class="text-center fs-5 fw-bold">Tematica</p>
@@ -37,7 +37,7 @@
         <!--Grid column-->
         <div class="col-lg-4 col-md-6 mb-4">
             <a style="text-decoration:none; color: black;" href="/BookNBookServices/listadoSagasServlet">
-              <img src="/BookNBookServices/imagenes/imagenLibroNoLeido.jpg"
+              <img src="https://cdn1.colorstore.nl/uploads/webshop/7417/caselio-69867717-effen-donkergroen-behang-collectie-jungle.jpg"
                 class="img-fluid rounded-4 shadow-2-strong"
                 alt="Sagas"/>
               <p class="text-center fs-5 fw-bold">Sagas</p>

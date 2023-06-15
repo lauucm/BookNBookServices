@@ -15,16 +15,18 @@
     <%@ include file="../encabezado/encabezado.jsp" %>
 
     <!-- LISTADO -->
-    <%ArrayList<Autor> listadoAutor = (ArrayList<Autor>) request.getSession().getAttribute("listadoAutor");
-        if(listadoAutor != null && listadoAutor.size() > 0) {%>
-        <%for (Autor autor : listadoAutor) {%>
-             <div class="d-flex w-50 justify-content-center">
-                <a href="/BookNBookServices/LibrosAutorServlet?id=<%=autor.getId()%>">
-                   <h2 class="card-title"><%= autor.getPseudonimo() %></h2>
-                   <br></br>
-                </a>
-             </div>
-        <% }
-    }%>
+        <%ArrayList<Autor> listadoAutor = (ArrayList<Autor>) request.getSession().getAttribute("listadoAutor");
+                if(listadoAutor != null && listadoAutor.size() > 0) {%>
+                <%for (Autor autor : listadoAutor) {%>
+                <div clas"w-50 justify-content-center">
+                    <ul class="list-group">
+                         <a href="/BookNBookServices/LibrosAutorServlet?id=<%=autor.getId()%>">
+                               <li class="list-group-item"><p class="text-center"><%= autor.getPseudonimo() %></p></li>
+                         </a>
+                     </ul>
+                </div>
+                <% }
+            }%>
+
 </body>
 </html>
