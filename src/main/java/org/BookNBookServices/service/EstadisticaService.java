@@ -3,11 +3,12 @@ package org.BookNBookServices.service;
 import org.BookNBookServices.dao.Estadistica;
 import org.BookNBookServices.dao.control.CalificacionDAO;
 import org.BookNBookServices.dao.control.EstadisticaDAO;
+import org.BookNBookServices.dao.control.EstadisticaSinFechaDAO;
 import org.BookNBookServices.dao.control.NoDataResponse;
 
 public interface EstadisticaService {
 
-    NoDataResponse addEstadistica(EstadisticaDAO dato);
+    NoDataResponse addEstadistica(EstadisticaSinFechaDAO dato);
 
     NoDataResponse updateFechaFinal(EstadisticaDAO dato);
 

@@ -1,5 +1,6 @@
 package org.BookNBookServices.dao.control;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,10 +14,12 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder
-public class EstadisticaDAO extends ErrorMessage implements Serializable{
+public class EstadisticaDAO implements Serializable{
 
         private Integer idLibro;
         private Integer idUsuario;
+
+        @JsonInclude(value = JsonInclude.Include.NON_NULL)
         private String fecha;
 
         public EstadisticaDAO(Integer idLibro, Integer IdUsuario){

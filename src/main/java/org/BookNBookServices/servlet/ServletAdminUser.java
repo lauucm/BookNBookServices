@@ -15,6 +15,8 @@ import org.BookNBookServices.service.impl.AdministradorServiceImpl;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @WebServlet("/adminPaginaServlet")
 @AllArgsConstructor
@@ -32,14 +34,10 @@ public class ServletAdminUser extends HttpServlet {
                 doPost(req, resp);
             }
 
-            ArrayList<Usuario> users = servicio.listarUsuarios().getListado();
+            List<Usuario> users = servicio.listarUsuarios().getListado();
 
-            users.removeIf(u -> (u.getTipoUsuario().equals(TipoUsuario.ADMINISTRADOR.toString())));
 
-            for (Usuario u: users
-                 ) {
-                System.out.println(u.getTipoUsuario().toString());
-            }
+            users = users.stream().filter(u -> !TipoUsuario.ADMINISTRADOR.toString().equals(u.getTipoUsuario().toString())).collect(Collectors.toList());
 
             req.getSession().setAttribute("listadoUsuarios", users);
             resp.sendRedirect("/BookNBookServices/jsp/comun/menus/administradorUsuarios.jsp");
@@ -55,8 +53,7 @@ public class ServletAdminUser extends HttpServlet {
         AdministradorService servicio = new AdministradorServiceImpl(new AdministradorManager());
         try {
             Integer deleteId = Integer.parseInt(req.getParameter("idUsuario"));
-            NoDataResponse isDelete = servicio.deleteUsuario(deleteId);
-            System.out.println(isDelete.getOk().toString());
+            servicio.deleteUsuario(deleteId);
             resp.sendRedirect("/BookNBookServices/adminPaginaServlet");
         } catch (Exception e) {
             System.out.println(e.getMessage());

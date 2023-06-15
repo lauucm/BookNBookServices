@@ -29,7 +29,7 @@
                       <tr>
                         <td><%= user.getNombre().toUpperCase()%></td>
                         <td><%= user.getEmail()%></td>
-                        <td><a href="/BookNBookServices/adminPaginaServlet?delete=true&idUsuario=<=%user.getId()%>"><i class="fa-solid fa-trash" style="color: #000000;"></i></a></td>
+                        <td><a href="/BookNBookServices/adminPaginaServlet?delete=true&idUsuario=<%=user.getId()%>"><i class="fa-solid fa-trash" style="color: #000000;"></i></a></td>
                       </tr>
                 <% }
               } %>

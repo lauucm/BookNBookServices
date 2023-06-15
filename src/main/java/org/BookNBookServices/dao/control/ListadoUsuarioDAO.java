@@ -5,7 +5,6 @@ import lombok.experimental.SuperBuilder;
 import org.BookNBookServices.dao.Usuario;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 @Setter
@@ -15,6 +14,6 @@ import java.util.List;
 @SuperBuilder
 public class ListadoUsuarioDAO extends ErrorMessage implements Serializable {
 
-    private ArrayList<Usuario> listado;
+    private List<Usuario> listado;
 
 }

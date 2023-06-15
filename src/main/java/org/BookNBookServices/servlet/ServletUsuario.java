@@ -34,14 +34,12 @@ public class ServletUsuario extends HttpServlet{
             UsuarioLogged usuarioLogged = (UsuarioLogged) request.getSession().getAttribute("userLogin");
 
             Usuario usuarioMostrar = service.getUsuario(usuarioLogged.getId());
-            //String paginas = String.valueOf(serviceD.paginasLeidas(usuarioLogged.getId()));
+            Integer paginas = serviceD.paginasLeidas(usuarioLogged.getId()).getPagActual();
             String libros = String.valueOf(serviceL.contarLibrosLeidos(usuarioLogged.getId()));
-            //System.out.println(paginas);
-            System.out.println(libros);
 
             if(usuarioMostrar != null){
                 request.getSession().setAttribute("usuarioMostrar", usuarioMostrar);
-                //request.getSession().setAttribute("paginasLeidas", paginas);
+                request.getSession().setAttribute("paginasLeidas", paginas);
                 request.getSession().setAttribute("librosLeidos", libros);
                 response.sendRedirect("/BookNBookServices/jsp/comun/paginas/paginaUsuario.jsp");
             } else {

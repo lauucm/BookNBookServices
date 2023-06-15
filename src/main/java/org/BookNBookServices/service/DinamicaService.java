@@ -12,6 +12,6 @@ public interface DinamicaService {
 
     NoDataResponse updatePag(DinamicaDAO dato);
 
-    Integer paginasLeidas(Integer idUsuario);
+    DinamicaDAO paginasLeidas(Integer idUsuario);
 
 }

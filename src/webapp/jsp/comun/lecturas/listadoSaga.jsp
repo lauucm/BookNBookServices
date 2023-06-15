@@ -15,16 +15,17 @@
     <%@ include file="../encabezado/encabezado.jsp" %>
 
     <!-- LISTADO -->
-    <%ArrayList<Saga> listadoSaga = (ArrayList<Saga>) request.getSession().getAttribute("listadoSaga");
-        if(listadoSaga != null && listadoSaga.size() > 0) {%>
-        <%for (Saga saga : listadoSaga) {%>
-             <div class="d-flex w-50 justify-content-center">
-                <a href="/BookNBookServices/LibrosSagaServlet?id=<%=saga.getId()%>">
-                   <h2 class="card-title"><%= saga.getNombre() %></h2>
-                   <br></br>
-                </a>
-             </div>
-        <% }
-    }%>
+        <%ArrayList<Saga> listadoSaga = (ArrayList<Saga>) request.getSession().getAttribute("listadoSaga");
+                if(listadoSaga != null && listadoSaga.size() > 0) {%>
+                <%for (Saga saga : listadoSaga) {%>
+                <div clas"w-50 justify-content-center">
+                    <ul class="list-group">
+                         <a href="/BookNBookServices/LibrosSagaServlet?id=<%=saga.getId()%>">
+                               <li class="list-group-item"><p class="text-center"><%= saga.getNombre() %></p></li>
+                         </a>
+                     </ul>
+                </div>
+                <% }
+            }%>
 </body>
 </html>

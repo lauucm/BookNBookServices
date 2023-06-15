@@ -20,7 +20,7 @@ public class AdministradorManager {
     }
 
     public NoDataResponse deleteUsuario(Integer usuario){
-        Response response = webTarget.path("/usuario/delete" + usuario).request(MediaType.APPLICATION_JSON)
+        Response response = webTarget.path("/usuario/delete/" + usuario).request(MediaType.APPLICATION_JSON)
                 .delete();
         return response.readEntity(NoDataResponse.class);
     }
