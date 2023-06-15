@@ -21,29 +21,26 @@
         <div class="col-md-4">
           <img src=<%= libro.getUrl()%> class="img-fluid rounded-start" alt="...">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-5">
           <div class="card-body">
             <h2 class="card-title"><%= libro.getNombre() %></h2>
             <h4 class="card-text"><%= libro.getAutor().getPseudonimo() %></h4>
             <p class="card-text"><em><%= libro.getTipologiaLibro() %> - <%= libro.getTematicaLibro() %></em></p>
             <p class="card-text">Paginas: <%= libro.getPaginaTotal() %></p>
-            <p class="card-text">Valoracion media: <%= libro.getCalificacionMedia() %></p>
             <p class="card-text"><%= libro.getDescripcion() %></p>
             <p class="card-text"><small class="text-muted"><%=libro.getFechaPublicacion()%></small></p>
           </div>
         </div>
-        <div class="col-2 add">
+        <div class="col-3 add">
             <form action="/BookNBookServices/addLibroUsuarioServlet?idLibro=<%= libro.getId() %>" method="POST">
                 <div class="m-5">
                     <input type="submit" value="Añadir" class="btn btn-info btn-lg btn-block" style="background-color: #2fc0ca;"/>
                 </div>
-            </form>
-        </div>
-        <div class="col-2 add">
             <form action="/BookNBookServices/addLeidoUsuarioServlet?idLibro=<%= libro.getId() %>" method="POST">
                 <div class="m-5">
                     <input type="submit" value="Añadir como leido" class="btn btn-info btn-lg btn-block" style="background-color: #2fc0ca;"/>
                 </div>
+            </form>
             </form>
         </div>
       </div>

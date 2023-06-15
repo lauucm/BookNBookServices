@@ -56,7 +56,8 @@
                     </div>
                     <% if (request.getAttribute("error") != null) { %>
                         <p style="color:red"><%= request.getAttribute("error") %></p>
-                    <% } else if (request.getAttribute("logro") != null) { %>
+                    <% } %>
+                     <% if (request.getAttribute("logro") != null) { %>
                         <p style="color:green"><%= request.getAttribute("logro") %></p>
                     <% }%>
 

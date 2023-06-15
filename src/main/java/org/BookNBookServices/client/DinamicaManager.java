@@ -40,10 +40,10 @@ public class DinamicaManager {
         return response.readEntity(NoDataResponse.class);
     }
 
-    public Integer paginasLeidas(Integer idUsuario){
+    public DinamicaDAO paginasLeidas(Integer idUsuario){
         Response response = webTarget.path(pathDinamica + "/" + idUsuario + "/paginas").request(MediaType.APPLICATION_JSON)
                 .get();
-        Integer body = response.readEntity(Integer.class);
+        DinamicaDAO body = response.readEntity(DinamicaDAO.class);
         return body;
     }
 

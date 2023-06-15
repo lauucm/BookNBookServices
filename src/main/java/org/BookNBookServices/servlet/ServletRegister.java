@@ -42,18 +42,17 @@ public class ServletRegister extends HttpServlet {
             NoDataResponse response = registerService.existEmail(emailUsuario);
             if (response.getOk()) {
                 req.setAttribute("error", response.getMessage());
-                req.getRequestDispatcher("/BookNBookServices/jsp/registro.jsp").forward(req, resp);
+                req.getRequestDispatcher("/jsp/registro.jsp").forward(req, resp);
             } else {
                 Usuario usuario = new Usuario(usuarioRegistrado);
                 NoDataResponse registerRespose = registerService.register(usuario);
-                System.out.println("MENSAJE: " + registerRespose.getMessage().toString());
                 if (registerRespose.getOk()) {
                     req.setAttribute("logro", registerRespose.getMessage());
+                    req.getRequestDispatcher("/jsp/registro.jsp").forward(req, resp);
                 } else {
                     req.setAttribute("error", registerRespose.getMessage());
                 }
-                req.getSession().setMaxInactiveInterval(10);
-                resp.sendRedirect("/BookNBookServices/jsp/registro.jsp");
+                req.getSession().setMaxInactiveInterval(500);
             }
         }
     }

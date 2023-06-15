@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
 import org.BookNBookServices.client.EstadisticaManager;
 import org.BookNBookServices.dao.control.EstadisticaDAO;
+import org.BookNBookServices.dao.control.EstadisticaSinFechaDAO;
 import org.BookNBookServices.dao.control.UsuarioLogged;
 import org.BookNBookServices.service.EstadisticaService;
 import org.BookNBookServices.service.impl.EstadisticaServiceImpl;
@@ -36,7 +37,9 @@ public class ServletAddLibroUsuario extends HttpServlet{
             if (usuarioLogged.getId() != null && idLibro != null){
                 Integer idUsuario = usuarioLogged.getId();
 
-                EstadisticaDAO estadistica = new EstadisticaDAO(idUsuario, idLibro);
+                EstadisticaSinFechaDAO estadistica = new EstadisticaSinFechaDAO(idUsuario, idLibro);
+                System.out.println(estadistica.getIdUsuario().toString());
+                System.out.println(estadistica.getIdLibro().toString());
                 service.addEstadistica(estadistica);
                 resp.sendRedirect("/BookNBookServices/libroDetalleServlet?idLibro=" + idLibro);
             } else {

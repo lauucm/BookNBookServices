@@ -31,8 +31,6 @@
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="/BookNBookServices/usuarioServlet">Mi usuario</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="/BookNBookServices/jsp/comun/paginas/paginaSugerencias.jsp">Sugerencias</a></li>
-                        <li><hr class="dropdown-divider"></li>
                         <form method="POST" action="/BookNBookServices/logoutServlet">
                             <li><input class="dropdown-item" type="submit" value="Cerrar Sesion"></li>
                         </form>

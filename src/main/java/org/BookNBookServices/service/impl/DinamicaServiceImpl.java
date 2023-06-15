@@ -28,7 +28,7 @@ public class DinamicaServiceImpl implements DinamicaService {
     }
 
     @Override
-    public Integer paginasLeidas(Integer idUsuario) {
+    public DinamicaDAO paginasLeidas(Integer idUsuario) {
         return dinamicaManager.paginasLeidas(idUsuario);
     }
 }

@@ -5,6 +5,7 @@ import org.BookNBookServices.client.EstadisticaManager;
 import org.BookNBookServices.dao.Estadistica;
 import org.BookNBookServices.dao.control.CalificacionDAO;
 import org.BookNBookServices.dao.control.EstadisticaDAO;
+import org.BookNBookServices.dao.control.EstadisticaSinFechaDAO;
 import org.BookNBookServices.dao.control.NoDataResponse;
 import org.BookNBookServices.service.EstadisticaService;
 
@@ -14,7 +15,7 @@ public class EstadisticaServiceImpl implements EstadisticaService {
     private EstadisticaManager estadisticaManager;
 
     @Override
-    public NoDataResponse addEstadistica(EstadisticaDAO dato) {
+    public NoDataResponse addEstadistica(EstadisticaSinFechaDAO dato) {
         return estadisticaManager.addEstadistica(dato);
     }
 
